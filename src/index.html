@@ -1,35 +1,51 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./assets/img/4geeks.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
 
-    <!-- Fontawesome is our recomended library for icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./assets/img/4geeks.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card Generator</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container d-flex flex-column align-items-center">
+    <div class="d-flex flex-column p-5 align-items-center"><label for="file"
+        style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: white;">New Card
+        in...</label>
+      <progress id="file" max="20" value="20"></progress>
+    </div>
+
+<!-- inputs para modificar el with y el height -->
+<div id="inputs" class="d-flex p-3 gap-4">  
+    <div class="d-flex align-items-center gap-2">
+        <label for="width" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: white;">width</label>
+        <input type="number" id="width">
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <label for="height" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: white;">height</label>
+        <input type="number" id="height">
+      </div>
+</div>
+
+<!-- carta -->
+    <div class="d-flex justify-content-center">
+      <div id="setWidth" class="p-2 bg-white rounded d-flex flex-column justify-content-between" style="width: 12rem; height: 18rem;">
+        <p class="d-flex justify-content-start fs-3 p-2" id="iconHead">♣</p>
+        <p class="card-text text-center fs-1 fw-bold" id="mainValue">J</p>
+        <p class="d-flex justify-content-start fs-3 p-2" id="bottomValue" style="transform: rotate(180deg);">♣</p>
       </div>
     </div>
 
-    <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
-    <script type="module" src="/app.js"></script>
-  </body>
+<!-- Boton para generar una nueva carta -->
+    <button class="btn btn-danger mt-5 w-50" id="reload">Not enough?</button>
+  </div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+
 </html>

@@ -1,5 +1,9 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body{
-    background: white;
+    background: green;
+    height: 100vh;
+    width: 100%;
+    place-items: center;
+    display: grid;
 }
