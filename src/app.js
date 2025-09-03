@@ -24,7 +24,7 @@ window.onload = function () {
     //  Asignando valores aleatorios y color rojo si el icono es igual a "♥"  en el icono superior
     let icoHead = generateRandom(picasIcon)
 
-    if (icoHead == "♥") {
+    if (icoHead == "♥" || icoHead == "♦") {
         document.querySelector("#iconHead").classList.add("text-danger")
 
     }
@@ -35,7 +35,7 @@ window.onload = function () {
 
 
     // Asignando valores aleatorios y color rojo si el icono es igual a "♥" en el icono inferior
-    if (icoHead == "♥") {
+    if (icoHead == "♥" || icoHead == "♦") {
         document.querySelector("#bottomValue").classList.add("text-danger")
 
     }
